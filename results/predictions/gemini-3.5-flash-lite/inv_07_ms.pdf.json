@@ -1,0 +1,40 @@
+{
+  "data": {
+    "vendor": "Maple Street Catering",
+    "invoice_number": "MS-14947",
+    "invoice_date": "2026-09-25",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Coffee service",
+        "amount": 275.68,
+        "category": "Meals & Entertainment",
+        "quantity": 4,
+        "unit_price": 68.92
+      },
+      {
+        "description": "Team lunch, 20 guests",
+        "amount": 434.0,
+        "category": "Meals & Entertainment",
+        "quantity": 1,
+        "unit_price": 434.0
+      },
+      {
+        "description": "Client dinner",
+        "amount": 592.91,
+        "category": "Meals & Entertainment",
+        "quantity": 1,
+        "unit_price": 592.91
+      }
+    ],
+    "total": 1384.0,
+    "bill_to": "Tidewater Goods Co.",
+    "due_date": "2026-11-09",
+    "subtotal": 1302.59,
+    "tax": 81.41,
+    "tax_rate": 0.0625,
+    "vendor_address": "301 Maple St, Chicago, IL 60607"
+  },
+  "latency_s": 2.4,
+  "tokens": 1073
+}

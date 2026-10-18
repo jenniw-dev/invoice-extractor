@@ -1,0 +1,26 @@
+{
+  "data": {
+    "vendor": "Kestrel Travel GmbH",
+    "invoice_number": "KT-29221",
+    "invoice_date": "2026-09-07",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Flight BER-LHR return",
+        "amount": 417.37,
+        "category": "Travel",
+        "quantity": 1,
+        "unit_price": 417.37
+      }
+    ],
+    "total": 496.67,
+    "bill_to": "Fernway Studio Ltd.",
+    "due_date": "2026-10-07",
+    "subtotal": 417.37,
+    "tax": 79.3,
+    "tax_rate": 0.19,
+    "vendor_address": "Friedrichstraße 112, 10117 Berlin"
+  },
+  "latency_s": 4.19,
+  "tokens": 959
+}

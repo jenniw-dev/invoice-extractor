@@ -1,0 +1,33 @@
+{
+  "data": {
+    "vendor": "Acme Cloud Services",
+    "invoice_number": "AC-20536",
+    "invoice_date": "2026-08-01",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Premium support plan",
+        "amount": 395.49,
+        "category": "Software & Subscriptions",
+        "quantity": 1,
+        "unit_price": 395.49
+      },
+      {
+        "description": "Cloud hosting, monthly",
+        "amount": 1141.0,
+        "category": "Software & Subscriptions",
+        "quantity": 1,
+        "unit_price": 1141.0
+      }
+    ],
+    "total": 1536.49,
+    "bill_to": "Tidewater Goods Co.",
+    "due_date": "2026-09-15",
+    "subtotal": 1536.49,
+    "tax": 0.0,
+    "tax_rate": null,
+    "vendor_address": "400 Market St, San Francisco, CA 94105"
+  },
+  "latency_s": 2.62,
+  "tokens": 1564
+}

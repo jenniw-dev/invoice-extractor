@@ -1,0 +1,26 @@
+{
+  "data": {
+    "vendor": "Oakline Legal Partners",
+    "invoice_number": "OL-14238",
+    "invoice_date": "2026-09-06",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Contract review",
+        "amount": 1493.52,
+        "category": "Professional Services",
+        "quantity": 1,
+        "unit_price": 1493.52
+      }
+    ],
+    "total": 1792.22,
+    "bill_to": "Fernway Studio Ltd.",
+    "due_date": null,
+    "subtotal": 1493.52,
+    "tax": 298.7,
+    "tax_rate": 0.2,
+    "vendor_address": "18 Rue de Rivoli, 75004 Paris"
+  },
+  "latency_s": 2.35,
+  "tokens": 1509
+}

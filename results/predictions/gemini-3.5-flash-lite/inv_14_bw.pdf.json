@@ -1,0 +1,26 @@
+{
+  "data": {
+    "vendor": "Brightwater Utilities",
+    "invoice_number": "BW-78992",
+    "invoice_date": "2026-09-02",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Electricity, September",
+        "amount": 741.0,
+        "category": "Rent & Utilities",
+        "quantity": 1.0,
+        "unit_price": 741.0
+      }
+    ],
+    "total": 797.31,
+    "bill_to": "Fernway Studio Ltd.",
+    "due_date": "2026-09-16",
+    "subtotal": 741.0,
+    "tax": 46.31,
+    "tax_rate": 0.0625,
+    "vendor_address": "1 Reservoir Ave, Denver, CO 80202"
+  },
+  "latency_s": 2.56,
+  "tokens": 945
+}

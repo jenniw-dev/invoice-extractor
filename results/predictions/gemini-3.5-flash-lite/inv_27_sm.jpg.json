@@ -1,0 +1,40 @@
+{
+  "data": {
+    "vendor": "Summit Media Group",
+    "invoice_number": "SM-64517",
+    "invoice_date": "2026-09-12",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Stock footage licence",
+        "amount": 931.4,
+        "category": "Advertising & Marketing",
+        "quantity": 5,
+        "unit_price": 186.28
+      },
+      {
+        "description": "Video production, 30s",
+        "amount": 3353.3,
+        "category": "Advertising & Marketing",
+        "quantity": 1,
+        "unit_price": 3353.3
+      },
+      {
+        "description": "Social ads management",
+        "amount": 1520.0,
+        "category": "Advertising & Marketing",
+        "quantity": 1,
+        "unit_price": 1520.0
+      }
+    ],
+    "total": 6269.08,
+    "bill_to": "Tidewater Goods Co.",
+    "due_date": "2026-10-27",
+    "subtotal": 5804.7,
+    "tax": 464.38,
+    "tax_rate": 0.08,
+    "vendor_address": "640 Peachtree St, Atlanta, GA 30308"
+  },
+  "latency_s": 3.13,
+  "tokens": 1632
+}

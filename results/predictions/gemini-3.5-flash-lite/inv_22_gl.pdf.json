@@ -1,0 +1,26 @@
+{
+  "data": {
+    "vendor": "Greenleaf Office",
+    "invoice_number": "GL-57531",
+    "invoice_date": "2026-08-25",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Notebooks, pack of 12",
+        "amount": 24.0,
+        "category": "Office Supplies",
+        "quantity": 1.0,
+        "unit_price": 24.0
+      }
+    ],
+    "total": 25.5,
+    "bill_to": "Copperleaf Analytics Inc.",
+    "due_date": "2026-09-08",
+    "subtotal": 24.0,
+    "tax": 1.5,
+    "tax_rate": 0.0625,
+    "vendor_address": "55 Elm St, Austin, TX 78701"
+  },
+  "latency_s": 2.11,
+  "tokens": 942
+}

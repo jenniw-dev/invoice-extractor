@@ -1,0 +1,26 @@
+{
+  "data": {
+    "vendor": "Harbor Print Studio",
+    "invoice_number": "HP-91198",
+    "invoice_date": "2026-08-05",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Flyers, A5, 1000",
+        "amount": 219.22,
+        "category": "Advertising & Marketing",
+        "quantity": 2,
+        "unit_price": 109.61
+      }
+    ],
+    "total": 236.76,
+    "bill_to": "Tidewater Goods Co.",
+    "due_date": "2026-09-19",
+    "subtotal": 319.22,
+    "tax": 17.54,
+    "tax_rate": 0.08,
+    "vendor_address": "12 Dock Ln, Boston, MA 02110"
+  },
+  "latency_s": 2.25,
+  "tokens": 954
+}

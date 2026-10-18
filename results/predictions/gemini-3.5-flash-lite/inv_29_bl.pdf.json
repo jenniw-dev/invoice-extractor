@@ -1,0 +1,33 @@
+{
+  "data": {
+    "vendor": "Bluebird Logistics",
+    "invoice_number": "BL-4804",
+    "invoice_date": "2026-08-25",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Express courier",
+        "amount": 300.0,
+        "category": "Shipping & Logistics",
+        "quantity": 5,
+        "unit_price": 60.0
+      },
+      {
+        "description": "Warehouse storage, monthly",
+        "amount": 741.76,
+        "category": "Rent & Utilities",
+        "quantity": 1,
+        "unit_price": 741.76
+      }
+    ],
+    "total": 1132.91,
+    "bill_to": "Copperleaf Analytics Inc.",
+    "due_date": "2026-09-24",
+    "subtotal": 1050.76,
+    "tax": 91.15,
+    "tax_rate": 0.0875,
+    "vendor_address": "7 Freight Way, Newark, NJ 07114"
+  },
+  "latency_s": 2.96,
+  "tokens": 1006
+}

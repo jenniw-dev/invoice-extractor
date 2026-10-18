@@ -1,0 +1,981 @@
+{
+  "inv_01_kt.pdf": {
+    "vendor": "Kestrel Travel GmbH",
+    "vendor_address": "Friedrichstraße 112, 10117 Berlin",
+    "bill_to": "Fernway Studio Ltd.",
+    "invoice_number": "KT-29221",
+    "invoice_date": "2026-09-07",
+    "due_date": "2026-10-07",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Flight BER-LHR return",
+        "quantity": 1,
+        "unit_price": 417.37,
+        "amount": 417.37,
+        "category": "Travel"
+      }
+    ],
+    "subtotal": 417.37,
+    "tax_rate": 0.19,
+    "tax": 79.3,
+    "total": 496.67,
+    "expected_flags": [],
+    "layout": "classic",
+    "source": "pdf"
+  },
+  "inv_02_hp.pdf": {
+    "vendor": "Harbor Print Studio",
+    "vendor_address": "12 Dock Ln, Boston, MA 02110",
+    "bill_to": "Tidewater Goods Co.",
+    "invoice_number": "HP-39427",
+    "invoice_date": "2026-08-07",
+    "due_date": "2026-09-21",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Flyers, A5, 1000",
+        "quantity": 1,
+        "unit_price": 178.0,
+        "amount": 178.0,
+        "category": "Advertising & Marketing"
+      },
+      {
+        "description": "Trade-show banner",
+        "quantity": 1,
+        "unit_price": 710.86,
+        "amount": 710.86,
+        "category": "Advertising & Marketing"
+      }
+    ],
+    "subtotal": 888.86,
+    "tax_rate": 0,
+    "tax": 0.0,
+    "total": 888.86,
+    "expected_flags": [],
+    "layout": "modern",
+    "source": "pdf"
+  },
+  "inv_03_ol.jpg": {
+    "vendor": "Oakline Legal Partners",
+    "vendor_address": "18 Rue de Rivoli, 75004 Paris",
+    "bill_to": "Fernway Studio Ltd.",
+    "invoice_number": "OL-14238",
+    "invoice_date": "2026-09-06",
+    "due_date": null,
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Contract review",
+        "quantity": 1,
+        "unit_price": 1493.52,
+        "amount": 1493.52,
+        "category": "Professional Services"
+      }
+    ],
+    "subtotal": 1493.52,
+    "tax_rate": 0.2,
+    "tax": 298.7,
+    "total": 1792.22,
+    "expected_flags": [
+      "missing_due_date"
+    ],
+    "layout": "minimal",
+    "source": "photo"
+  },
+  "inv_04_hp.pdf": {
+    "vendor": "Harbor Print Studio",
+    "vendor_address": "12 Dock Ln, Boston, MA 02110",
+    "bill_to": "Tidewater Goods Co.",
+    "invoice_number": "HP-91198",
+    "invoice_date": "2026-08-05",
+    "due_date": "2026-09-19",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Flyers, A5, 1000",
+        "quantity": 2,
+        "unit_price": 109.61,
+        "amount": 219.22,
+        "category": "Advertising & Marketing"
+      }
+    ],
+    "subtotal": 319.22,
+    "tax_rate": 0.08,
+    "tax": 17.54,
+    "total": 236.76,
+    "expected_flags": [
+      "items_sum_mismatch"
+    ],
+    "layout": "classic",
+    "source": "pdf"
+  },
+  "inv_05_ol.pdf": {
+    "vendor": "Oakline Legal Partners",
+    "vendor_address": "18 Rue de Rivoli, 75004 Paris",
+    "bill_to": "Tidewater Goods Co.",
+    "invoice_number": "OL-61142",
+    "invoice_date": "2026-08-15",
+    "due_date": "2026-08-29",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Trademark filing",
+        "quantity": 1,
+        "unit_price": 479.78,
+        "amount": 479.78,
+        "category": "Professional Services"
+      },
+      {
+        "description": "Contract review",
+        "quantity": 1,
+        "unit_price": 955.15,
+        "amount": 955.15,
+        "category": "Professional Services"
+      }
+    ],
+    "subtotal": 1434.93,
+    "tax_rate": 0.2,
+    "tax": 286.99,
+    "total": 1721.92,
+    "expected_flags": [],
+    "layout": "modern",
+    "source": "pdf"
+  },
+  "inv_06_ll.jpg": {
+    "vendor": "Ledgerline Accounting LLP",
+    "vendor_address": "9 Fleet St, London EC4Y 1AA",
+    "bill_to": "Fernway Studio Ltd.",
+    "invoice_number": "LL-7175",
+    "invoice_date": "2026-09-17",
+    "due_date": "2026-10-01",
+    "currency": "GBP",
+    "line_items": [
+      {
+        "description": "Payroll processing",
+        "quantity": 1,
+        "unit_price": 392.41,
+        "amount": 392.41,
+        "category": "Professional Services"
+      },
+      {
+        "description": "VAT return filing",
+        "quantity": 1,
+        "unit_price": 427.0,
+        "amount": 427.0,
+        "category": "Professional Services"
+      }
+    ],
+    "subtotal": 819.41,
+    "tax_rate": 0.2,
+    "tax": 163.88,
+    "total": 983.29,
+    "expected_flags": [],
+    "layout": "minimal",
+    "source": "photo"
+  },
+  "inv_07_ms.pdf": {
+    "vendor": "Maple Street Catering",
+    "vendor_address": "301 Maple St, Chicago, IL 60607",
+    "bill_to": "Tidewater Goods Co.",
+    "invoice_number": "MS-14947",
+    "invoice_date": "2026-09-25",
+    "due_date": "2026-11-09",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Coffee service",
+        "quantity": 4,
+        "unit_price": 68.92,
+        "amount": 275.68,
+        "category": "Meals & Entertainment"
+      },
+      {
+        "description": "Team lunch, 20 guests",
+        "quantity": 1,
+        "unit_price": 434.0,
+        "amount": 434.0,
+        "category": "Meals & Entertainment"
+      },
+      {
+        "description": "Client dinner",
+        "quantity": 1,
+        "unit_price": 592.91,
+        "amount": 592.91,
+        "category": "Meals & Entertainment"
+      }
+    ],
+    "subtotal": 1302.59,
+    "tax_rate": 0.0625,
+    "tax": 81.41,
+    "total": 1384.0,
+    "expected_flags": [],
+    "layout": "classic",
+    "source": "pdf"
+  },
+  "inv_08_nw.pdf": {
+    "vendor": "Northwind Supply Co.",
+    "vendor_address": "88 Harbor Rd, Portland, OR 97201",
+    "bill_to": "Tidewater Goods Co.",
+    "invoice_number": "NW-64699",
+    "invoice_date": "2026-09-08",
+    "due_date": null,
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Toner cartridge, black",
+        "quantity": 4,
+        "unit_price": 77.0,
+        "amount": 308.0,
+        "category": "Office Supplies"
+      },
+      {
+        "description": "27-inch monitor",
+        "quantity": 1,
+        "unit_price": 330.78,
+        "amount": 330.78,
+        "category": "Equipment"
+      },
+      {
+        "description": "Copy paper, A4, 10 reams",
+        "quantity": 2,
+        "unit_price": 39.0,
+        "amount": 78.0,
+        "category": "Office Supplies"
+      }
+    ],
+    "subtotal": 716.78,
+    "tax_rate": 0,
+    "tax": 0.0,
+    "total": 716.78,
+    "expected_flags": [
+      "missing_due_date"
+    ],
+    "layout": "modern",
+    "source": "pdf"
+  },
+  "inv_09_sm.jpg": {
+    "vendor": "Summit Media Group",
+    "vendor_address": "640 Peachtree St, Atlanta, GA 30308",
+    "bill_to": "Tidewater Goods Co.",
+    "invoice_number": "SM-60177",
+    "invoice_date": "2026-09-19",
+    "due_date": null,
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Video production, 30s",
+        "quantity": 1,
+        "unit_price": 2466.42,
+        "amount": 2466.42,
+        "category": "Advertising & Marketing"
+      },
+      {
+        "description": "Social ads management",
+        "quantity": 1,
+        "unit_price": 2343.0,
+        "amount": 2343.0,
+        "category": "Advertising & Marketing"
+      },
+      {
+        "description": "Stock footage licence",
+        "quantity": 3,
+        "unit_price": 125.86,
+        "amount": 377.58,
+        "category": "Advertising & Marketing"
+      }
+    ],
+    "subtotal": 5367.0,
+    "tax_rate": 0.0875,
+    "tax": 453.86,
+    "total": 5640.86,
+    "expected_flags": [
+      "items_sum_mismatch",
+      "missing_due_date"
+    ],
+    "layout": "minimal",
+    "source": "photo"
+  },
+  "inv_10_bl.pdf": {
+    "vendor": "Bluebird Logistics",
+    "vendor_address": "7 Freight Way, Newark, NJ 07114",
+    "bill_to": "Fernway Studio Ltd.",
+    "invoice_number": "BL-62993",
+    "invoice_date": "2026-08-05",
+    "due_date": "2026-09-04",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Pallet freight, domestic",
+        "quantity": 1,
+        "unit_price": 409.36,
+        "amount": 409.36,
+        "category": "Shipping & Logistics"
+      },
+      {
+        "description": "Warehouse storage, monthly",
+        "quantity": 1,
+        "unit_price": 550.0,
+        "amount": 550.0,
+        "category": "Rent & Utilities"
+      }
+    ],
+    "subtotal": 959.36,
+    "tax_rate": 0.0875,
+    "tax": 83.94,
+    "total": 1043.3,
+    "expected_flags": [],
+    "layout": "classic",
+    "source": "pdf"
+  },
+  "inv_11_bw.pdf": {
+    "vendor": "Brightwater Utilities",
+    "vendor_address": "1 Reservoir Ave, Denver, CO 80202",
+    "bill_to": "Fernway Studio Ltd.",
+    "invoice_number": "BW-26112",
+    "invoice_date": "2026-09-12",
+    "due_date": "2026-09-26",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Water and sewer",
+        "quantity": 1,
+        "unit_price": 148.0,
+        "amount": 148.0,
+        "category": "Rent & Utilities"
+      },
+      {
+        "description": "Electricity, September",
+        "quantity": 1,
+        "unit_price": 309.09,
+        "amount": 309.09,
+        "category": "Rent & Utilities"
+      }
+    ],
+    "subtotal": 457.09,
+    "tax_rate": 0,
+    "tax": 0.0,
+    "total": 457.09,
+    "expected_flags": [],
+    "layout": "modern",
+    "source": "pdf"
+  },
+  "inv_12_ac.jpg": {
+    "vendor": "Acme Cloud Services",
+    "vendor_address": "400 Market St, San Francisco, CA 94105",
+    "bill_to": "Fernway Studio Ltd.",
+    "invoice_number": "AC-50672",
+    "invoice_date": "2026-08-28",
+    "due_date": null,
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Managed database",
+        "quantity": 1,
+        "unit_price": 173.0,
+        "amount": 173.0,
+        "category": "Software & Subscriptions"
+      },
+      {
+        "description": "Cloud hosting, monthly",
+        "quantity": 1,
+        "unit_price": 1753.0,
+        "amount": 1753.0,
+        "category": "Software & Subscriptions"
+      },
+      {
+        "description": "Onboarding workshop",
+        "quantity": 1,
+        "unit_price": 749.68,
+        "amount": 749.68,
+        "category": "Professional Services"
+      },
+      {
+        "description": "Premium support plan",
+        "quantity": 1,
+        "unit_price": 291.54,
+        "amount": 291.54,
+        "category": "Software & Subscriptions"
+      }
+    ],
+    "subtotal": 2967.22,
+    "tax_rate": 0,
+    "tax": 0.0,
+    "total": 2967.22,
+    "expected_flags": [
+      "missing_due_date"
+    ],
+    "layout": "minimal",
+    "source": "photo"
+  },
+  "inv_13_ms.pdf": {
+    "vendor": "Maple Street Catering",
+    "vendor_address": "301 Maple St, Chicago, IL 60607",
+    "bill_to": "Tidewater Goods Co.",
+    "invoice_number": "MS-42104",
+    "invoice_date": "2026-09-12",
+    "due_date": "2026-09-26",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Team lunch, 20 guests",
+        "quantity": 1,
+        "unit_price": 481.0,
+        "amount": 481.0,
+        "category": "Meals & Entertainment"
+      }
+    ],
+    "subtotal": 481.0,
+    "tax_rate": 0,
+    "tax": 0.0,
+    "total": 481.0,
+    "expected_flags": [],
+    "layout": "classic",
+    "source": "pdf"
+  },
+  "inv_14_bw.pdf": {
+    "vendor": "Brightwater Utilities",
+    "vendor_address": "1 Reservoir Ave, Denver, CO 80202",
+    "bill_to": "Fernway Studio Ltd.",
+    "invoice_number": "BW-78992",
+    "invoice_date": "2026-09-02",
+    "due_date": "2026-09-16",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Electricity, September",
+        "quantity": 1,
+        "unit_price": 741.0,
+        "amount": 741.0,
+        "category": "Rent & Utilities"
+      }
+    ],
+    "subtotal": 741.0,
+    "tax_rate": 0.0625,
+    "tax": 46.31,
+    "total": 797.31,
+    "expected_flags": [
+      "total_mismatch"
+    ],
+    "layout": "modern",
+    "source": "pdf"
+  },
+  "inv_15_gl.jpg": {
+    "vendor": "Greenleaf Office",
+    "vendor_address": "55 Elm St, Austin, TX 78701",
+    "bill_to": "Copperleaf Analytics Inc.",
+    "invoice_number": "GL-42441",
+    "invoice_date": "2026-08-08",
+    "due_date": "2026-08-22",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Ergonomic chair",
+        "quantity": 1,
+        "unit_price": 280.61,
+        "amount": 280.61,
+        "category": "Equipment"
+      },
+      {
+        "description": "Whiteboard markers",
+        "quantity": 3,
+        "unit_price": 10.25,
+        "amount": 30.75,
+        "category": "Office Supplies"
+      },
+      {
+        "description": "Notebooks, pack of 12",
+        "quantity": 2,
+        "unit_price": 18.0,
+        "amount": 36.0,
+        "category": "Office Supplies"
+      }
+    ],
+    "subtotal": 347.36,
+    "tax_rate": 0.08,
+    "tax": 27.79,
+    "total": 375.15,
+    "expected_flags": [],
+    "layout": "minimal",
+    "source": "photo"
+  },
+  "inv_16_bl.pdf": {
+    "vendor": "Bluebird Logistics",
+    "vendor_address": "7 Freight Way, Newark, NJ 07114",
+    "bill_to": "Fernway Studio Ltd.",
+    "invoice_number": "BL-35664",
+    "invoice_date": "2026-09-26",
+    "due_date": "2026-10-10",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Pallet freight, domestic",
+        "quantity": 1,
+        "unit_price": 786.95,
+        "amount": 786.95,
+        "category": "Shipping & Logistics"
+      },
+      {
+        "description": "Express courier",
+        "quantity": 1,
+        "unit_price": 68.41,
+        "amount": 68.41,
+        "category": "Shipping & Logistics"
+      }
+    ],
+    "subtotal": 855.36,
+    "tax_rate": 0,
+    "tax": 0.0,
+    "total": 855.36,
+    "expected_flags": [],
+    "layout": "classic",
+    "source": "pdf"
+  },
+  "inv_17_ac.pdf": {
+    "vendor": "Acme Cloud Services",
+    "vendor_address": "400 Market St, San Francisco, CA 94105",
+    "bill_to": "Fernway Studio Ltd.",
+    "invoice_number": "AC-84136",
+    "invoice_date": "2026-08-10",
+    "due_date": "2026-09-09",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Premium support plan",
+        "quantity": 1,
+        "unit_price": 374.0,
+        "amount": 374.0,
+        "category": "Software & Subscriptions"
+      },
+      {
+        "description": "Cloud hosting, monthly",
+        "quantity": 1,
+        "unit_price": 1058.11,
+        "amount": 1058.11,
+        "category": "Software & Subscriptions"
+      }
+    ],
+    "subtotal": 1432.11,
+    "tax_rate": 0,
+    "tax": 0.0,
+    "total": 1432.11,
+    "expected_flags": [],
+    "layout": "modern",
+    "source": "pdf"
+  },
+  "inv_18_ac.jpg": {
+    "vendor": "Acme Cloud Services",
+    "vendor_address": "400 Market St, San Francisco, CA 94105",
+    "bill_to": "Tidewater Goods Co.",
+    "invoice_number": "AC-20536",
+    "invoice_date": "2026-08-01",
+    "due_date": "2026-09-15",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Premium support plan",
+        "quantity": 1,
+        "unit_price": 395.49,
+        "amount": 395.49,
+        "category": "Software & Subscriptions"
+      },
+      {
+        "description": "Cloud hosting, monthly",
+        "quantity": 1,
+        "unit_price": 1141.0,
+        "amount": 1141.0,
+        "category": "Software & Subscriptions"
+      }
+    ],
+    "subtotal": 1536.49,
+    "tax_rate": 0,
+    "tax": 0.0,
+    "total": 1536.49,
+    "expected_flags": [],
+    "layout": "minimal",
+    "source": "photo"
+  },
+  "inv_19_ll.pdf": {
+    "vendor": "Ledgerline Accounting LLP",
+    "vendor_address": "9 Fleet St, London EC4Y 1AA",
+    "bill_to": "Fernway Studio Ltd.",
+    "invoice_number": "LL-55040",
+    "invoice_date": "2026-09-27",
+    "due_date": "2026-10-11",
+    "currency": "GBP",
+    "line_items": [
+      {
+        "description": "Quarterly bookkeeping",
+        "quantity": 1,
+        "unit_price": 1914.15,
+        "amount": 1914.15,
+        "category": "Professional Services"
+      },
+      {
+        "description": "Payroll processing",
+        "quantity": 1,
+        "unit_price": 413.0,
+        "amount": 413.0,
+        "category": "Professional Services"
+      },
+      {
+        "description": "VAT return filing",
+        "quantity": 1,
+        "unit_price": 624.0,
+        "amount": 624.0,
+        "category": "Professional Services"
+      }
+    ],
+    "subtotal": 3051.15,
+    "tax_rate": 0.2,
+    "tax": 590.23,
+    "total": 3541.38,
+    "expected_flags": [
+      "items_sum_mismatch"
+    ],
+    "layout": "classic",
+    "source": "pdf"
+  },
+  "inv_20_hp.pdf": {
+    "vendor": "Harbor Print Studio",
+    "vendor_address": "12 Dock Ln, Boston, MA 02110",
+    "bill_to": "Copperleaf Analytics Inc.",
+    "invoice_number": "HP-30831",
+    "invoice_date": "2026-09-21",
+    "due_date": "2026-10-05",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Business cards, 500",
+        "quantity": 1,
+        "unit_price": 91.0,
+        "amount": 91.0,
+        "category": "Advertising & Marketing"
+      },
+      {
+        "description": "Trade-show banner",
+        "quantity": 1,
+        "unit_price": 672.0,
+        "amount": 672.0,
+        "category": "Advertising & Marketing"
+      },
+      {
+        "description": "Flyers, A5, 1000",
+        "quantity": 2,
+        "unit_price": 187.99,
+        "amount": 375.98,
+        "category": "Advertising & Marketing"
+      }
+    ],
+    "subtotal": 1138.98,
+    "tax_rate": 0.08,
+    "tax": 91.12,
+    "total": 1230.1,
+    "expected_flags": [],
+    "layout": "modern",
+    "source": "pdf"
+  },
+  "inv_21_ms.jpg": {
+    "vendor": "Maple Street Catering",
+    "vendor_address": "301 Maple St, Chicago, IL 60607",
+    "bill_to": "Fernway Studio Ltd.",
+    "invoice_number": "MS-16118",
+    "invoice_date": "2026-08-26",
+    "due_date": "2026-09-25",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Client dinner",
+        "quantity": 1,
+        "unit_price": 369.92,
+        "amount": 369.92,
+        "category": "Meals & Entertainment"
+      }
+    ],
+    "subtotal": 369.92,
+    "tax_rate": 0.08,
+    "tax": 29.59,
+    "total": 399.51,
+    "expected_flags": [],
+    "layout": "minimal",
+    "source": "photo"
+  },
+  "inv_22_gl.pdf": {
+    "vendor": "Greenleaf Office",
+    "vendor_address": "55 Elm St, Austin, TX 78701",
+    "bill_to": "Copperleaf Analytics Inc.",
+    "invoice_number": "GL-57531",
+    "invoice_date": "2026-08-25",
+    "due_date": "2026-09-08",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Notebooks, pack of 12",
+        "quantity": 1,
+        "unit_price": 24.0,
+        "amount": 24.0,
+        "category": "Office Supplies"
+      }
+    ],
+    "subtotal": 24.0,
+    "tax_rate": 0.0625,
+    "tax": 1.5,
+    "total": 25.5,
+    "expected_flags": [],
+    "layout": "classic",
+    "source": "pdf"
+  },
+  "inv_23_gl.pdf": {
+    "vendor": "Greenleaf Office",
+    "vendor_address": "55 Elm St, Austin, TX 78701",
+    "bill_to": "Copperleaf Analytics Inc.",
+    "invoice_number": "GL-92384",
+    "invoice_date": "2026-09-09",
+    "due_date": "2026-10-09",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Whiteboard markers",
+        "quantity": 3,
+        "unit_price": 13.58,
+        "amount": 40.74,
+        "category": "Office Supplies"
+      }
+    ],
+    "subtotal": 40.74,
+    "tax_rate": 0.08,
+    "tax": 3.26,
+    "total": 44.0,
+    "expected_flags": [],
+    "layout": "modern",
+    "source": "pdf"
+  },
+  "inv_24_nw.jpg": {
+    "vendor": "Northwind Supply Co.",
+    "vendor_address": "88 Harbor Rd, Portland, OR 97201",
+    "bill_to": "Copperleaf Analytics Inc.",
+    "invoice_number": "NW-68561",
+    "invoice_date": "2026-08-27",
+    "due_date": "2026-10-11",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Toner cartridge, black",
+        "quantity": 1,
+        "unit_price": 71.0,
+        "amount": 71.0,
+        "category": "Office Supplies"
+      },
+      {
+        "description": "27-inch monitor",
+        "quantity": 1,
+        "unit_price": 265.89,
+        "amount": 265.89,
+        "category": "Equipment"
+      },
+      {
+        "description": "Desk organiser set",
+        "quantity": 10,
+        "unit_price": 23.0,
+        "amount": 230.0,
+        "category": "Office Supplies"
+      },
+      {
+        "description": "Copy paper, A4, 10 reams",
+        "quantity": 10,
+        "unit_price": 49.0,
+        "amount": 490.0,
+        "category": "Office Supplies"
+      }
+    ],
+    "subtotal": 1056.89,
+    "tax_rate": 0,
+    "tax": 0.0,
+    "total": 1106.89,
+    "expected_flags": [
+      "total_mismatch"
+    ],
+    "layout": "minimal",
+    "source": "photo"
+  },
+  "inv_25_kt.pdf": {
+    "vendor": "Kestrel Travel GmbH",
+    "vendor_address": "Friedrichstraße 112, 10117 Berlin",
+    "bill_to": "Copperleaf Analytics Inc.",
+    "invoice_number": "KT-53383",
+    "invoice_date": "2026-08-31",
+    "due_date": "2026-09-14",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Hotel, 3 nights",
+        "quantity": 1,
+        "unit_price": 516.0,
+        "amount": 516.0,
+        "category": "Travel"
+      }
+    ],
+    "subtotal": 516.0,
+    "tax_rate": 0.19,
+    "tax": 98.04,
+    "total": 614.04,
+    "expected_flags": [],
+    "layout": "classic",
+    "source": "pdf"
+  },
+  "inv_26_px.pdf": {
+    "vendor": "Pixelcraft Software",
+    "vendor_address": "220 King St W, Toronto, ON M5H 3T4",
+    "bill_to": "Tidewater Goods Co.",
+    "invoice_number": "PX-33662",
+    "invoice_date": "2026-09-27",
+    "due_date": "2026-10-11",
+    "currency": "CAD",
+    "line_items": [
+      {
+        "description": "Additional seat",
+        "quantity": 2,
+        "unit_price": 81.11,
+        "amount": 162.22,
+        "category": "Software & Subscriptions"
+      }
+    ],
+    "subtotal": 162.22,
+    "tax_rate": 0.13,
+    "tax": 21.09,
+    "total": 183.31,
+    "expected_flags": [],
+    "layout": "modern",
+    "source": "pdf"
+  },
+  "inv_27_sm.jpg": {
+    "vendor": "Summit Media Group",
+    "vendor_address": "640 Peachtree St, Atlanta, GA 30308",
+    "bill_to": "Tidewater Goods Co.",
+    "invoice_number": "SM-64517",
+    "invoice_date": "2026-09-12",
+    "due_date": "2026-10-27",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Stock footage licence",
+        "quantity": 5,
+        "unit_price": 186.28,
+        "amount": 931.4,
+        "category": "Advertising & Marketing"
+      },
+      {
+        "description": "Video production, 30s",
+        "quantity": 1,
+        "unit_price": 3353.3,
+        "amount": 3353.3,
+        "category": "Advertising & Marketing"
+      },
+      {
+        "description": "Social ads management",
+        "quantity": 1,
+        "unit_price": 1520.0,
+        "amount": 1520.0,
+        "category": "Advertising & Marketing"
+      }
+    ],
+    "subtotal": 5804.7,
+    "tax_rate": 0.08,
+    "tax": 464.38,
+    "total": 6269.08,
+    "expected_flags": [],
+    "layout": "minimal",
+    "source": "photo"
+  },
+  "inv_28_nw.pdf": {
+    "vendor": "Northwind Supply Co.",
+    "vendor_address": "88 Harbor Rd, Portland, OR 97201",
+    "bill_to": "Tidewater Goods Co.",
+    "invoice_number": "NW-92163",
+    "invoice_date": "2026-08-25",
+    "due_date": "2026-09-08",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Copy paper, A4, 10 reams",
+        "quantity": 5,
+        "unit_price": 42.63,
+        "amount": 213.15,
+        "category": "Office Supplies"
+      },
+      {
+        "description": "Toner cartridge, black",
+        "quantity": 5,
+        "unit_price": 62.18,
+        "amount": 310.9,
+        "category": "Office Supplies"
+      }
+    ],
+    "subtotal": 524.05,
+    "tax_rate": 0.0875,
+    "tax": 45.85,
+    "total": 569.9,
+    "expected_flags": [],
+    "layout": "classic",
+    "source": "pdf"
+  },
+  "inv_29_bl.pdf": {
+    "vendor": "Bluebird Logistics",
+    "vendor_address": "7 Freight Way, Newark, NJ 07114",
+    "bill_to": "Copperleaf Analytics Inc.",
+    "invoice_number": "BL-4804",
+    "invoice_date": "2026-08-25",
+    "due_date": "2026-09-24",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Express courier",
+        "quantity": 5,
+        "unit_price": 60.0,
+        "amount": 300.0,
+        "category": "Shipping & Logistics"
+      },
+      {
+        "description": "Warehouse storage, monthly",
+        "quantity": 1,
+        "unit_price": 741.76,
+        "amount": 741.76,
+        "category": "Rent & Utilities"
+      }
+    ],
+    "subtotal": 1050.76,
+    "tax_rate": 0.0875,
+    "tax": 91.15,
+    "total": 1132.91,
+    "expected_flags": [
+      "items_sum_mismatch"
+    ],
+    "layout": "modern",
+    "source": "pdf"
+  },
+  "inv_30_px.jpg": {
+    "vendor": "Pixelcraft Software",
+    "vendor_address": "220 King St W, Toronto, ON M5H 3T4",
+    "bill_to": "Fernway Studio Ltd.",
+    "invoice_number": "PX-85246",
+    "invoice_date": "2026-09-23",
+    "due_date": "2026-10-23",
+    "currency": "CAD",
+    "line_items": [
+      {
+        "description": "Custom template pack",
+        "quantity": 1,
+        "unit_price": 283.53,
+        "amount": 283.53,
+        "category": "Advertising & Marketing"
+      }
+    ],
+    "subtotal": 283.53,
+    "tax_rate": 0.13,
+    "tax": 36.86,
+    "total": 320.39,
+    "expected_flags": [],
+    "layout": "minimal",
+    "source": "photo"
+  }
+}

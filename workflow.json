@@ -1,0 +1,259 @@
+{
+  "name": "Invoice Extractor",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "Upload invoices",
+        "formDescription": "PDF or phone photo. Extracted data is written to the Invoices Google Sheet.",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Invoice",
+              "fieldType": "file",
+              "multipleFiles": true,
+              "acceptFileTypes": ".pdf, .jpg, .jpeg, .png",
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {
+          "respondWithOptions": {
+            "values": {
+              "formSubmittedText": "Thanks! Your invoices are being processed. Check the Google Sheet in a few seconds."
+            }
+          }
+        }
+      },
+      "id": "4aba93a4-bd14-5b4d-b41b-e103d6de0840",
+      "name": "Upload form",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Turns each uploaded file into a Gemini generateContent request body.\nconst PROMPT = \"You are an accounts-payable assistant. Extract the data printed on this invoice.\\n\\nRules:\\n- Copy values exactly as printed. Do NOT correct arithmetic, even if the numbers look wrong.\\n- Dates as YYYY-MM-DD. If a field is not printed (e.g. no due date), return null.\\n- currency: 3-letter ISO code (USD, EUR, GBP, CAD, ...), inferred from symbols if needed.\\n- Numbers as plain numbers without currency symbols or thousands separators.\\n- tax_rate as a decimal (8% -> 0.08). If only a tax amount is printed, return null for tax_rate.\\n- For each line item, choose the best category from: Software & Subscriptions, Office Supplies, Equipment, Travel, Meals & Entertainment, Advertising & Marketing, Professional Services, Shipping & Logistics, Rent & Utilities, Other.\\n\";\nconst SCHEMA = {\"type\": \"OBJECT\", \"properties\": {\"vendor\": {\"type\": \"STRING\", \"nullable\": true}, \"vendor_address\": {\"type\": \"STRING\", \"nullable\": true}, \"bill_to\": {\"type\": \"STRING\", \"nullable\": true}, \"invoice_number\": {\"type\": \"STRING\", \"nullable\": true}, \"invoice_date\": {\"type\": \"STRING\", \"nullable\": true}, \"due_date\": {\"type\": \"STRING\", \"nullable\": true}, \"currency\": {\"type\": \"STRING\", \"nullable\": true}, \"line_items\": {\"type\": \"ARRAY\", \"items\": {\"type\": \"OBJECT\", \"properties\": {\"description\": {\"type\": \"STRING\"}, \"quantity\": {\"type\": \"NUMBER\", \"nullable\": true}, \"unit_price\": {\"type\": \"NUMBER\", \"nullable\": true}, \"amount\": {\"type\": \"NUMBER\", \"nullable\": true}, \"category\": {\"type\": \"STRING\", \"enum\": [\"Software & Subscriptions\", \"Office Supplies\", \"Equipment\", \"Travel\", \"Meals & Entertainment\", \"Advertising & Marketing\", \"Professional Services\", \"Shipping & Logistics\", \"Rent & Utilities\", \"Other\"]}}, \"required\": [\"description\", \"amount\", \"category\"]}}, \"subtotal\": {\"type\": \"NUMBER\", \"nullable\": true}, \"tax_rate\": {\"type\": \"NUMBER\", \"nullable\": true}, \"tax\": {\"type\": \"NUMBER\", \"nullable\": true}, \"total\": {\"type\": \"NUMBER\", \"nullable\": true}}, \"required\": [\"vendor\", \"invoice_number\", \"invoice_date\", \"currency\", \"line_items\", \"total\"]};\nconst out = [];\nfor (let i = 0; i < $input.all().length; i++) {\n  const item = $input.all()[i];\n  const keys = Object.keys(item.binary || {});\n  if (!keys.length) throw new Error('No file found on item ' + i);\n  for (const key of keys) {   // the upload form allows several files at once\n    const bin = item.binary[key];\n    const buf = await this.helpers.getBinaryDataBuffer(i, key);\n    const mime = bin.mimeType && bin.mimeType !== 'application/octet-stream'\n      ? bin.mimeType\n      : (/\\.pdf$/i.test(bin.fileName || '') ? 'application/pdf' : 'image/jpeg');\n    out.push({ json: {\n      file_name: bin.fileName || key,\n      body: {\n        contents: [{ parts: [\n          { inline_data: { mime_type: mime, data: buf.toString('base64') } },\n          { text: PROMPT },\n        ] }],\n        generationConfig: { temperature: 0, responseMimeType: 'application/json', responseSchema: SCHEMA },\n      },\n    } });\n  }\n}\nreturn out;"
+      },
+      "id": "8384b3e4-4065-517b-99a1-30b412fe4302",
+      "name": "Build Gemini request",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        260,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.body) }}",
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "id": "a1350a3c-821b-5bd8-9250-7e3809353ad4",
+      "name": "Gemini extract",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        520,
+        0
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000,
+      "onError": "continueRegularOutput",
+      "notes": "Header Auth credential: name = x-goog-api-key, value = your Gemini API key"
+    },
+    {
+      "parameters": {
+        "jsCode": "function validate(inv) {\n  const TOL = 0.02;\n  const flags = [];\n  const items = inv.line_items || [];\n  const itemsSum = Math.round(items.reduce((s, it) => s + (it.amount || 0), 0) * 100) / 100;\n  const subtotal = inv.subtotal, tax = inv.tax || 0, total = inv.total;\n  if (!inv.vendor || !inv.invoice_number || total == null) flags.push('missing_required_fields');\n  if (!inv.due_date) flags.push('missing_due_date');\n  if (subtotal != null && Math.abs(itemsSum - subtotal) > TOL) flags.push('items_sum_mismatch');\n  if (total != null && items.length && Math.abs(itemsSum + tax - total) > TOL) flags.push('total_mismatch');\n  for (const it of items) {\n    if (it.quantity != null && it.unit_price != null && it.amount != null &&\n        Math.abs(it.quantity * it.unit_price - it.amount) > TOL) { flags.push('line_amount_mismatch'); break; }\n  }\n  return flags;\n}\n\n// Parses Gemini's JSON, runs deterministic checks, and shapes rows for Google Sheets.\nconst requests = $('Build Gemini request').all();\nreturn $input.all().map((item, i) => {\n  const fileName = (requests[i] && requests[i].json.file_name) || 'unknown';\n  const now = new Date().toISOString().slice(0, 19).replace('T', ' ');\n  let inv = null, error = '';\n  try {\n    const text = item.json.candidates[0].content.parts[0].text;\n    inv = JSON.parse(text);\n  } catch (e) {\n    error = item.json.error ? JSON.stringify(item.json.error).slice(0, 200) : 'Could not read model output';\n  }\n  if (!inv) {\n    return { json: { invoice: { processed_at_utc: now, file: fileName, status: 'Extraction failed', issues: error }, lines: [] } };\n  }\n  const items = inv.line_items || [];\n  const itemsSum = Math.round(items.reduce((s, it) => s + (it.amount || 0), 0) * 100) / 100;\n  const flags = validate(inv);\n  const invoice = {\n    processed_at_utc: now,\n    file: fileName,\n    status: flags.length ? 'Needs review' : 'OK',\n    issues: flags.join(', '),\n    vendor: inv.vendor,\n    invoice_number: inv.invoice_number,\n    invoice_date: inv.invoice_date,\n    due_date: inv.due_date || '',\n    currency: inv.currency,\n    subtotal: inv.subtotal,\n    tax_rate: inv.tax_rate,\n    tax: inv.tax,\n    total: inv.total,\n    line_items_sum: itemsSum,\n    line_item_count: items.length,\n    bill_to: inv.bill_to,\n    vendor_address: inv.vendor_address,\n  };\n  const lines = items.map((it, n) => ({\n    invoice_number: inv.invoice_number,\n    vendor: inv.vendor,\n    invoice_date: inv.invoice_date,\n    line: n + 1,\n    description: it.description,\n    category: it.category,\n    quantity: it.quantity,\n    unit_price: it.unit_price,\n    amount: it.amount,\n    currency: inv.currency,\n  }));\n  return { json: { invoice, lines } };\n});"
+      },
+      "id": "a3b941c7-1763-5d26-8274-20ba835f56ad",
+      "name": "Parse + validate",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        780,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return $input.all().map(i => ({ json: i.json.invoice }));"
+      },
+      "id": "3543484d-04b1-541b-8f21-b7b2dc812d51",
+      "name": "Invoice row",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1040,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return $input.all().flatMap(i => (i.json.lines || []).map(l => ({ json: l })));"
+      },
+      "id": "4060a195-556a-596c-90a2-e02359435f4b",
+      "name": "Line item rows",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1040,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Invoices",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": []
+        },
+        "options": {}
+      },
+      "id": "035000eb-d99a-57a7-bf21-ae54866fcd2a",
+      "name": "Sheets: Invoices",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1300,
+        -120
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 3000
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Line Items",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": []
+        },
+        "options": {}
+      },
+      "id": "cbccdbcf-9848-5ed3-a309-619d46e5c9bd",
+      "name": "Sheets: Line Items",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1300,
+        120
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 3000
+    }
+  ],
+  "connections": {
+    "Upload form": {
+      "main": [
+        [
+          {
+            "node": "Build Gemini request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Gemini request": {
+      "main": [
+        [
+          {
+            "node": "Gemini extract",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gemini extract": {
+      "main": [
+        [
+          {
+            "node": "Parse + validate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice row": {
+      "main": [
+        [
+          {
+            "node": "Sheets: Invoices",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Line item rows": {
+      "main": [
+        [
+          {
+            "node": "Sheets: Line Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse + validate": {
+      "main": [
+        [
+          {
+            "node": "Invoice row",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Line item rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {}
+}

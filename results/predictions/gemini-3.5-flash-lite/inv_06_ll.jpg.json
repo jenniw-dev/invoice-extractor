@@ -1,0 +1,33 @@
+{
+  "data": {
+    "vendor": "Ledgerline Accounting LLP",
+    "invoice_number": "LL-7175",
+    "invoice_date": "2026-09-17",
+    "currency": "GBP",
+    "line_items": [
+      {
+        "description": "Payroll processing",
+        "amount": 392.41,
+        "category": "Professional Services",
+        "quantity": 1,
+        "unit_price": 392.41
+      },
+      {
+        "description": "VAT return filing",
+        "amount": 427.0,
+        "category": "Professional Services",
+        "quantity": 1,
+        "unit_price": 427.0
+      }
+    ],
+    "total": 983.29,
+    "bill_to": "Fernway Studio Ltd.",
+    "due_date": "2026-10-01",
+    "subtotal": 819.41,
+    "tax": 163.88,
+    "tax_rate": 0.2,
+    "vendor_address": "9 Fleet St, London EC4Y 1AA"
+  },
+  "latency_s": 2.14,
+  "tokens": 1570
+}

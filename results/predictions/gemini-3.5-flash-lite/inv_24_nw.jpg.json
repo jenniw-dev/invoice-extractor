@@ -1,0 +1,47 @@
+{
+  "data": {
+    "vendor": "Northwind Supply Co.",
+    "invoice_number": "NW-68561",
+    "invoice_date": "2026-08-27",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Toner cartridge, black",
+        "amount": 71.0,
+        "category": "Office Supplies",
+        "quantity": 1.0,
+        "unit_price": 71.0
+      },
+      {
+        "description": "27-inch monitor",
+        "amount": 265.89,
+        "category": "Equipment",
+        "quantity": 1.0,
+        "unit_price": 265.89
+      },
+      {
+        "description": "Desk organiser set",
+        "amount": 230.0,
+        "category": "Office Supplies",
+        "quantity": 10.0,
+        "unit_price": 23.0
+      },
+      {
+        "description": "Copy paper, A4, 10 reams",
+        "amount": 490.0,
+        "category": "Office Supplies",
+        "quantity": 10.0,
+        "unit_price": 49.0
+      }
+    ],
+    "total": 1106.89,
+    "bill_to": "Copperleaf Analytics Inc.",
+    "due_date": "2026-10-11",
+    "subtotal": 1056.89,
+    "tax": 0.0,
+    "tax_rate": null,
+    "vendor_address": "88 Harbor Rd, Portland, OR 97201"
+  },
+  "latency_s": 2.86,
+  "tokens": 1684
+}

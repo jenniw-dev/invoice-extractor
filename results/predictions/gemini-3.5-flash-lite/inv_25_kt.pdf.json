@@ -1,0 +1,26 @@
+{
+  "data": {
+    "vendor": "Kestrel Travel GmbH",
+    "invoice_number": "KT-53383",
+    "invoice_date": "2026-08-31",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Hotel, 3 nights",
+        "amount": 516.0,
+        "category": "Travel",
+        "quantity": 1,
+        "unit_price": 516.0
+      }
+    ],
+    "total": 614.04,
+    "bill_to": "Copperleaf Analytics Inc.",
+    "due_date": "2026-09-14",
+    "subtotal": 516.0,
+    "tax": 98.04,
+    "tax_rate": 0.19,
+    "vendor_address": "Friedrichstraße 112, 10117 Berlin"
+  },
+  "latency_s": 1.94,
+  "tokens": 959
+}

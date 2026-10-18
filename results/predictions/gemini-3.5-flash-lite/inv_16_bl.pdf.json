@@ -1,0 +1,33 @@
+{
+  "data": {
+    "vendor": "Bluebird Logistics",
+    "invoice_number": "BL-35664",
+    "invoice_date": "2026-09-26",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Pallet freight, domestic",
+        "amount": 786.95,
+        "category": "Shipping & Logistics",
+        "quantity": 1,
+        "unit_price": 786.95
+      },
+      {
+        "description": "Express courier",
+        "amount": 68.41,
+        "category": "Shipping & Logistics",
+        "quantity": 1,
+        "unit_price": 68.41
+      }
+    ],
+    "total": 855.36,
+    "bill_to": "Fernway Studio Ltd.",
+    "due_date": "2026-10-10",
+    "subtotal": 855.36,
+    "tax": 0.0,
+    "tax_rate": null,
+    "vendor_address": "7 Freight Way, Newark, NJ 07114"
+  },
+  "latency_s": 2.64,
+  "tokens": 997
+}

@@ -1,0 +1,40 @@
+{
+  "data": {
+    "vendor": "Harbor Print Studio",
+    "invoice_number": "HP-30831",
+    "invoice_date": "2026-09-21",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Business cards, 500",
+        "amount": 91.0,
+        "category": "Advertising & Marketing",
+        "quantity": 1.0,
+        "unit_price": 91.0
+      },
+      {
+        "description": "Trade-show banner",
+        "amount": 672.0,
+        "category": "Advertising & Marketing",
+        "quantity": 1.0,
+        "unit_price": 672.0
+      },
+      {
+        "description": "Flyers, A5, 1000",
+        "amount": 375.98,
+        "category": "Advertising & Marketing",
+        "quantity": 2.0,
+        "unit_price": 187.99
+      }
+    ],
+    "total": 1230.1,
+    "bill_to": "Copperleaf Analytics Inc.",
+    "due_date": "2026-10-05",
+    "subtotal": 1138.98,
+    "tax": 91.12,
+    "tax_rate": 0.08,
+    "vendor_address": "12 Dock Ln, Boston, MA 02110"
+  },
+  "latency_s": 2.68,
+  "tokens": 1082
+}

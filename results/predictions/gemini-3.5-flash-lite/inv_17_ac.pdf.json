@@ -1,0 +1,33 @@
+{
+  "data": {
+    "vendor": "Acme Cloud Services",
+    "invoice_number": "AC-84136",
+    "invoice_date": "2026-08-10",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Premium support plan",
+        "amount": 374.0,
+        "category": "Software & Subscriptions",
+        "quantity": 1,
+        "unit_price": 374.0
+      },
+      {
+        "description": "Cloud hosting, monthly",
+        "amount": 1058.11,
+        "category": "Software & Subscriptions",
+        "quantity": 1,
+        "unit_price": 1058.11
+      }
+    ],
+    "total": 1432.11,
+    "bill_to": "Fernway Studio Ltd.",
+    "due_date": "2026-09-09",
+    "subtotal": 1432.11,
+    "tax": 0.0,
+    "tax_rate": null,
+    "vendor_address": "400 Market St, San Francisco, CA 94105"
+  },
+  "latency_s": 2.44,
+  "tokens": 1010
+}

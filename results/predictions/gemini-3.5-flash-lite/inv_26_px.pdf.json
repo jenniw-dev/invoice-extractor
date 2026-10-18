@@ -1,0 +1,26 @@
+{
+  "data": {
+    "vendor": "Pixelcraft Software",
+    "invoice_number": "PX-33662",
+    "invoice_date": "2026-09-27",
+    "currency": "CAD",
+    "line_items": [
+      {
+        "description": "Additional seat",
+        "amount": 162.22,
+        "category": "Software & Subscriptions",
+        "quantity": 2,
+        "unit_price": 81.11
+      }
+    ],
+    "total": 183.31,
+    "bill_to": "Tidewater Goods Co.",
+    "due_date": "2026-10-11",
+    "subtotal": 162.22,
+    "tax": 21.09,
+    "tax_rate": 0.13,
+    "vendor_address": "220 King St W, Toronto, ON M5H 3T4"
+  },
+  "latency_s": 2.53,
+  "tokens": 947
+}

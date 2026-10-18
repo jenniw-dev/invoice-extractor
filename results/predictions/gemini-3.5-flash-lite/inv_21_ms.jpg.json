@@ -1,0 +1,26 @@
+{
+  "data": {
+    "vendor": "Maple Street Catering",
+    "invoice_number": "MS-16118",
+    "invoice_date": "2026-08-26",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Client dinner",
+        "amount": 369.92,
+        "category": "Meals & Entertainment",
+        "quantity": 1,
+        "unit_price": 369.92
+      }
+    ],
+    "total": 399.51,
+    "bill_to": "Fernway Studio Ltd.",
+    "due_date": "2026-09-25",
+    "subtotal": 369.92,
+    "tax": 29.59,
+    "tax_rate": 0.08,
+    "vendor_address": "301 Maple St, Chicago, IL 60607"
+  },
+  "latency_s": 2.34,
+  "tokens": 1498
+}

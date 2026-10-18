@@ -1,0 +1,26 @@
+{
+  "data": {
+    "vendor": "Greenleaf Office",
+    "invoice_number": "GL-92384",
+    "invoice_date": "2026-09-09",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Whiteboard markers",
+        "amount": 40.74,
+        "category": "Office Supplies",
+        "quantity": 3,
+        "unit_price": 13.58
+      }
+    ],
+    "total": 44.0,
+    "bill_to": "Copperleaf Analytics Inc.",
+    "due_date": "2026-10-09",
+    "subtotal": 40.74,
+    "tax": 3.26,
+    "tax_rate": 0.08,
+    "vendor_address": "55 Elm St, Austin, TX 78701"
+  },
+  "latency_s": 2.31,
+  "tokens": 938
+}

@@ -1,0 +1,40 @@
+{
+  "data": {
+    "vendor": "Northwind Supply Co.",
+    "invoice_number": "NW-64699",
+    "invoice_date": "2026-09-08",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Toner cartridge, black",
+        "amount": 308.0,
+        "category": "Office Supplies",
+        "quantity": 4.0,
+        "unit_price": 77.0
+      },
+      {
+        "description": "27-inch monitor",
+        "amount": 330.78,
+        "category": "Equipment",
+        "quantity": 1.0,
+        "unit_price": 330.78
+      },
+      {
+        "description": "Copy paper, A4, 10 reams",
+        "amount": 78.0,
+        "category": "Office Supplies",
+        "quantity": 2.0,
+        "unit_price": 39.0
+      }
+    ],
+    "total": 716.78,
+    "bill_to": "Tidewater Goods Co.",
+    "due_date": null,
+    "subtotal": 716.78,
+    "tax": 0.0,
+    "tax_rate": null,
+    "vendor_address": "88 Harbor Rd, Portland, OR 97201"
+  },
+  "latency_s": 3.35,
+  "tokens": 1059
+}

@@ -1,0 +1,33 @@
+{
+  "data": {
+    "vendor": "Oakline Legal Partners",
+    "invoice_number": "OL-61142",
+    "invoice_date": "2026-08-15",
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Trademark filing",
+        "amount": 479.78,
+        "category": "Professional Services",
+        "quantity": 1.0,
+        "unit_price": 479.78
+      },
+      {
+        "description": "Contract review",
+        "amount": 955.15,
+        "category": "Professional Services",
+        "quantity": 1.0,
+        "unit_price": 955.15
+      }
+    ],
+    "total": 1721.92,
+    "bill_to": "Tidewater Goods Co.",
+    "due_date": "2026-08-29",
+    "subtotal": 1434.93,
+    "tax": 286.99,
+    "tax_rate": 0.2,
+    "vendor_address": "18 Rue de Rivoli, 75004 Paris"
+  },
+  "latency_s": 2.4,
+  "tokens": 1021
+}

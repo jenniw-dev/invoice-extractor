@@ -1,0 +1,40 @@
+{
+  "data": {
+    "vendor": "Greenleaf Office",
+    "invoice_number": "GL-42441",
+    "invoice_date": "2026-08-08",
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Ergonomic chair",
+        "amount": 280.61,
+        "category": "Equipment",
+        "quantity": 1,
+        "unit_price": 280.61
+      },
+      {
+        "description": "Whiteboard markers",
+        "amount": 30.75,
+        "category": "Office Supplies",
+        "quantity": 3,
+        "unit_price": 10.25
+      },
+      {
+        "description": "Notebooks, pack of 12",
+        "amount": 36.0,
+        "category": "Office Supplies",
+        "quantity": 2,
+        "unit_price": 18.0
+      }
+    ],
+    "total": 375.15,
+    "bill_to": "Copperleaf Analytics Inc.",
+    "due_date": "2026-08-22",
+    "subtotal": 347.36,
+    "tax": 27.79,
+    "tax_rate": 0.08,
+    "vendor_address": "55 Elm St, Austin, TX 78701"
+  },
+  "latency_s": 2.37,
+  "tokens": 1617
+}
